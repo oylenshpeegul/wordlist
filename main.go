@@ -100,7 +100,9 @@ func main() {
 	case 1:
 		filename = flag.Arg(0)
 	default:
-		log.Fatal("Too many arguments!")
+		fmt.Fprintln(os.Stderr, "Too many arguments!")
+		flag.Usage()
+		os.Exit(1)
 	}
 
 	var file *os.File
