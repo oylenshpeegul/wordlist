@@ -93,9 +93,14 @@ func main() {
 	)
 	flag.Parse()
 
-	filename := "-"
-	if flag.NArg() == 1 {
+	var filename string
+	switch flag.NArg() {
+	case 0:
+		filename = "-"
+	case 1:
 		filename = flag.Arg(0)
+	default:
+		log.Fatal("Too many arguments!")
 	}
 
 	var file *os.File
