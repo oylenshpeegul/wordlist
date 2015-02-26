@@ -86,23 +86,29 @@ func (w Wordlist) decompressPair(s, t string) (string, error) {
 
 func main() {
 
-	var filename = flag.String(
-		"filename",
-		"wp.txt",
-		"name of file to read from",
-	)
 	var schemename = flag.String(
 		"schemename",
 		"Mike",
-		"name of scheme to use",
+		"name of scheme to use: Crack, DAWG or [Mike]",
 	)
 	flag.Parse()
 
-	file, err := os.Open(*filename)
-	if err != nil {
-		log.Fatal(err)
+	filename := "-"
+	if flag.NArg() == 1 {
+		filename = flag.Arg(0)
 	}
-	defer file.Close()
+
+	var file *os.File
+	if filename == "-" {
+		file = os.Stdin
+	} else {
+		var err error
+		file, err = os.Open(filename)
+		if err != nil {
+			log.Fatal(err)
+		}
+		defer file.Close()
+	}
 
 	w := Wordlist{
 		Schemes[*schemename],
@@ -110,7 +116,7 @@ func main() {
 		bufio.NewWriter(os.Stdout),
 	}
 
-	if path.Ext(*filename) == ".cpt" {
+	if path.Ext(filename) == ".cpt" {
 		if w.header != "" {
 			w.scanner.Scan()
 			if w.header != w.scanner.Text() {
