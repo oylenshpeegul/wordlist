@@ -6,9 +6,11 @@ years ago from my friend Mike, who did it in Fortran. I re-did it
 [in Perl](https://github.com/oylenshpeegul/Compress-DAWG) and again
 [in Python](https://github.com/oylenshpeegul/Compress-DAWG/blob/master/wordlist.py). Now I've done it in Go.
 
-I have since learned that this scheme is called
+## See also
+
+This scheme is called
 [front compression](http://en.wikipedia.org/wiki/Incremental_encoding)
-and it's fairly common.
+and it's not uncommon.
 * [Crack](http://www.crypticide.com/alecm/software/crack/c50-faq.html) dictionaries.
 * [word-list-compress](http://www.man-online.org/page/1-word-list-compress/)
 used by [aspell](http://aspell.net/).
