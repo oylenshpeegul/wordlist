@@ -14,5 +14,6 @@ and it's not uncommon.
 * [Crack](http://www.crypticide.com/alecm/software/crack/c50-faq.html) dictionaries.
 * [word-list-compress](http://www.man-online.org/page/1-word-list-compress/)
 used by [aspell](http://aspell.net/).
+* [quackle](http://quackle.org)
 * [Unix locate](http://www.eecs.berkeley.edu/Pubs/TechRpts/1983/CSD-83-148.pdf)(pdf)...thanks, [@b0rk](http://jvns.ca/blog/2015/03/05/how-the-locate-command-works-and-lets-rewrite-it-in-one-minute/)!
 
