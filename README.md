@@ -11,9 +11,9 @@ years ago from my friend Mike, who did it in Fortran. I re-did it
 This scheme is called
 [front compression](http://en.wikipedia.org/wiki/Incremental_encoding)
 and it's not uncommon.
-* [Crack](http://www.crypticide.com/alecm/software/crack/c50-faq.html) dictionaries.
+* [Crack](http://www.crypticide.com/alecm/software/crack/c50-faq.html), a Unix password cracker uses it on its dictionaries.
 * [word-list-compress](http://www.man-online.org/page/1-word-list-compress/)
-used by [aspell](http://aspell.net/).
-* [quackle](http://quackle.org)
+compresses [aspell](http://aspell.net/) dictionaries.
+* [quackle](http://quackle.org), a scrabble bot, compresses its dictionaries.
 * [Unix locate](http://www.eecs.berkeley.edu/Pubs/TechRpts/1983/CSD-83-148.pdf)(pdf)...thanks, [@b0rk](http://jvns.ca/blog/2015/03/05/how-the-locate-command-works-and-lets-rewrite-it-in-one-minute/)!
 
